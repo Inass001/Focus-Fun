@@ -35,6 +35,8 @@ p {
   position: absolute;
   left: 50%;
   top: 50%;
+    width:1000px;
+  height: 300px;
   transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.3%;
@@ -167,4 +169,5 @@ p {
   .main-bar fieldset::after {
     height: 4px;
   }
+
 }
