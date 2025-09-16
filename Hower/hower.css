@@ -35,7 +35,6 @@ p {
   position: absolute;
   width:1000px;
   height: 300px;
-   background-color:red;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -172,5 +171,6 @@ p {
   }
 
 }
+
 
 
