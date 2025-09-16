@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock</title>
+  <link rel="stylesheet" href="hower.css">
+</head>
+<body>
+  <a href="/index.html" class="home-btn">Home</a>
+  <fieldset class="main-bar">
+     <fieldset>
+       <p  class="hower"></p>
+     </fieldset>
+     <fieldset> 
+       <p class="minutes"></p>
+     </fieldset>
+     <fieldset >
+       <p class="seconds"></p>
+     </fieldset>
+  </fieldset>
+</body>
+<script src="https://unpkg.com/dayjs@1.11.10/dayjs.min.js"></script>
+<script>
+  // Create a new Date object for the current time
+
+// Get hour, minute, and seconds
+function setTime(){
+ const now = new Date();
+ let hower=now.getHours();
+ let minutes=now.getMinutes();
+ let seconds=now.getSeconds();
+
+ if (hower<9){hower=`0${hower}`};
+ if (minutes<9){minutes=`0${minutes}`};
+ if (seconds<9){seconds=`0${seconds}`};
+ 
+document.querySelector('.hower').innerHTML =hower;      // 0–23
+document.querySelector('.minutes').innerHTML = minutes;  // 0–59
+document.querySelector('.seconds').innerHTML= seconds;  // 0–59
+}
+setTime();
+setInterval(setTime,1000);
+
+console.log(`Time: ${hours}:${minutes}:${seconds}`);
+
+</script>
+</html>

@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+fieldset {
+  border: none;
+  transform: translate();
+  background-color:#f6f2ff;
+}
+
+button {
+  border: none;
+}
+
+body {
+  background: linear-gradient(135deg, #e3d5ff 0%, #c7b8ff 30%, #9d8df1 100%);
+  font-family: 'Poppins', sans-serif;
+  color:#2f2f4f;
+  position: relative;
+
+
+}
+
+.main-bar {
+  
+  width: 90vw;
+  position: absolute;
+  left: 50%;
+  top:100px; 
+  transform: translate(-50%,0);
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  min-width: 300px;
+  border: none;
+  background-color: transparent;
+}
+
+.main-bar fieldset {
+  margin-top: 20px;;
+  border-radius: 20px;
+}
+
+.container1 {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.Timer {
+  height: 400px;
+  position: relative;
+  border: none;
+}
+
+.setter-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.session {
+  align-items: start;
+  height: 150px;
+  margin:auto;
+  width: 40%;
+  box-shadow: 0px 8px 20px rgba(60,0,120,0.15);
+}
+
+.break {
+  align-items: end;
+  height: 150px;
+  width: 40%;
+  margin: auto;
+  box-shadow: 0px 8px 20px rgba(60,0,120,0.15);
+}
+
+.session fieldset, .break fieldset {
+  height: 50px;
+  display: grid;
+  grid-template-columns: 30%  5% 30% 5% 30%;
+   background-color:#d6cfe7; ;
+}
+
+.increase {
+  grid-column: 5/6;
+}
+
+.decrease {
+  grid-column: 1/2;
+  background-color: transparent;
+  border: none;
+}
+
+.increase, .decrease {
+  height: 30px;
+  margin-top: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.increase:hover, .decrease:hover {
+  transform: scale(1.2);
+}
+
+.period {
+  grid-column: 3/4;
+  text-align: center;
+  font-size: large;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 20px;
+}
+
+.Achievements {
+  min-height: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0px 8px 20px rgba(60,0,120,0.15);
+}
+
+.Achievements fieldset {
+  min-height: 50px;
+  max-height:200px;
+  border: none;
+  box-shadow: 8px 6px 12px #bbaedc;
+  background-color:#bbaedc; ;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+
+h2 {
+  color:#9c27b0; 
+}
+
+.Timer div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.Timer button {
+  width: 40%;
+  margin-left: 5%;
+  height:40px ;
+  border-radius: 10px;
+}
+
+.start {
+  background: #9c27b0;
+  color: white;
+}
+
+.start:hover {
+  background: #7a1fa0;
+  transform: translateY(2px);
+  box-shadow: 0 6px 12px rgba(156, 39, 176, 0.3);
+}
+
+.reset {
+  background: rgba(47, 47, 79, 0.1);
+  color: #2f2f4f;
+}
+
+.reset:hover {
+  background: rgba(47, 47, 79, 0.2);
+  transform: translateY(2px);
+  box-shadow: 0 6px 12px rgba(47, 47, 79, 0.2);
+}
+
+.start, .reset {
+  font-weight:700;
+}
+
+.the-hower {
+  font-size: 70px;
+  color: #9c27b0;
+}
+
+.session:hover, .break:hover, .Stats:hover, .Achievements:hover, .Timer:hover {
+  transform: translateY(-2px);
+}
+
+.session, .break, .Stats, .Achievements, .Timer {
+  box-shadow: 8px 8px 10px rgba(120,90,160,0.2);
+}
+
+/*the scroller*/
+.Achievements::-webkit-scrollbar {
+  width: 8px;
+}
+
+.Achievements::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 20px;
+}
+
+.Achievements::-webkit-scrollbar-thumb {
+  background: #7a57d1;
+  border-radius: 20px;
+}
+  dt {
+    color: #7a57d1;
+  }
+
+@media (max-width:1100px) {
+  .main-bar {
+    flex-direction: column;
+  }
+  .container1 {
+    margin: auto;
+  }
+  .container2 {
+    margin: auto;
+    width: 80%;
+  }
+  .container2 fieldset {
+    width: 80%;
+    margin: 10px auto ;
+  }
+}
+
+@media (max-width:700px) {
+  .setter-container {
+    flex-direction: column;
+    width:90%;
+  }
+  .break, .session {
+    width: 90%;
+  }
+  .Timer{
+    height:320px ;
+  }
+}
+@media (max-width:480px) {
+  .the-hower{
+    font-size: 50px;
+  }
+  .Timer{
+    height:250px ;
+  }
+}
+.home-btn {
+  position: absolute;
+  top: 30px;        /* distance from top of page */
+  left: 30px;       /* distance from left of page */
+  padding: 12px 25px;
+  background-color:#9d8df1 ; /* pinkish-red matching your p text */
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif; /* matches your body font */
+}
+
+.home-btn:hover {
+  background-color:#5f4eb5;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+

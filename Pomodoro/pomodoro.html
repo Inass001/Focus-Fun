@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="pomodoro.css">
+  <title>Pomodoro Timer</title>
+</head>
+<body>
+  <a href="/index.html" class="home-btn">Home</a>
+  <fieldset class="main-bar">
+     <div class="container1">
+         <fieldset class="Timer">
+              <div>
+                <h3 class="mode" style="text-align: center;">Session</h3>
+                <h1 class="the-hower"><span class="minutes">25</span>:<span class="seconds">00</span></h1>
+                <button class="start">Start</button>
+                <button class="reset">Reset</button>
+              </div>
+         </fieldset>
+         <div class="setter-container">
+            <fieldset class="session">
+                 <fieldset>
+                      <button class="decrease session-dec">➖</button>
+                      <p class="period session-length">25</p>
+                      <button class="increase session-inc">➕</button>
+                 </fieldset>
+                 <p style="text-align: center;">Session Length</p>
+             </fieldset>
+            <fieldset class="break">
+                 <fieldset>
+                     <button class="decrease break-dec">➖</button>
+                      <p class="period break-length">5</p>
+                      <button class="increase break-inc">➕</button>
+                 </fieldset>
+                 <p style="text-align: center;">Break Length</p>
+            </fieldset>
+         </div>
+     </div>
+
+     <div class="container2">
+         <fieldset class="Stats">
+             <h2>📊 Pomodoro Stats :</h2>
+             <dl>
+                <dt>* Pomodoros Today :</dt>
+                <dd class="todayP"></dd>
+                <dt>* Streak: </dt>
+                <dd class="streak"></dd>
+                <dt>* Best Day:</dt>
+                <dd class="bestday"></dd>
+             </dl>
+         </fieldset>
+         <fieldset class="Achievements">
+             <h2>🏆 Achievements</h2>
+             <div class="prizes-container">
+             </div>
+         </fieldset>
+     </div>
+  </fieldset>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js" defer></script>
+<script src="pomodoro.js" defer></script>
+
+</html>

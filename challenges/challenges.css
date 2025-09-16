@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* Global styling inspired by Duolingo image */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #d9483bc7; /* warm red background */
+  color: #fff; /* white text */
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fieldsets */
+fieldset {
+  border-radius: 20px;
+  border: none;
+}
+
+.home-btn {
+  position: absolute;
+  top: 30px;        /* distance from top of page */
+  left: 30px;       /* distance from left of page */
+  padding: 12px 25px;
+  background-color:#cf1d0cc7; /* pinkish-red matching your p text */
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif; /* matches your body font */
+}
+
+.home-btn:hover {
+  background-color:#ed4333c7;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Main container */
+.main-bar {
+  width: 80vw;
+  position: absolute;
+  left: 50%;
+  top: auto;
+  transform: translate(-50%, -0);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f3c9c1; /* soft pink box */
+  max-width: 1000px;
+  min-width: 300px;
+}
+
+/* Title */
+.title {
+  color: #d9483b; /* main red text */
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Challenges section */
+.challenges {
+  min-height: 130px;
+  background-color: #fff;
+  color: #333;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 1.1rem;
+}
+
+/* Menu buttons */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+ button {
+  min-height: 50px;
+  border: none;
+  border-radius: 15px;
+  background-color: #d9483b;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+  background-color: #b7362c;
+  transform: scale(1.02);
+}
+
+/* Exit button variant */
+.exit {
+  background-color: #555; /* dark gray for exit */
+}
+.exit:hover {
+  background-color: #333;
+}
+
+/* Aside + details */
+aside {
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+aside summary {
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+aside details {
+  padding-left: 10px;
+}
+/* Challenges card */
+.challenges {
+  background: linear-gradient(135deg, #fff 0%, #fbe1dd 100%);
+  color: #333;
+  padding: 25px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional subtle decorative dots */
+.challenges::before,
+.challenges::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(217,72,59,0.2);
+  border-radius: 50%;
+}
+.challenges::before {
+  width: 120px;
+  height: 120px;
+  top: -40px;
+  left: -40px;
+}
+.challenges::after {
+  width: 80px;
+  height: 80px;
+  bottom: -30px;
+  right: -30px;
+}
+
+/* Header inside challenges */
+.challenge-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.challenge-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #d9483b; /* main Duolingo red */
+  font-weight: 700;
+}
+
+.challenge-header .emoji {
+  font-size: 1.8rem;
+}
+
+/* Text of the challenge */
+.challenges p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #444;
+}
+.challenges p strong {
+  font-weight: 700;
+}
+/* Motivation banner floating above main-bar */
+.motivation-banner {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  font-family: 'Pacifico', cursive; /* الخط الجديد */
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  /* Movement animation */
+  animation: floaty 3s ease-in-out infinite;
+}
+
+
+@media (max-width:1000px) {
+  .main-bar{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.button-area{
+  display: none;
+  display: flex; 
+  flex-direction: column;
+}
+button{
+  margin-top: 20px;;
+  width: 100%;
+}
+

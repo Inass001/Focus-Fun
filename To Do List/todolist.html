@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="todolist.css">
+  <title>To Do List</title>
+</head>
+<body>
+     <a href="/index.html" class="home-btn">Home</a>
+    <fieldset class="main-bar">
+       <div class="container1">
+            <fieldset class="today">
+               <fieldset class="today-d dash">
+                 <h3>TODAY</h3> 
+                 <div class="input-container">
+                         <input type="text-area"  id="today-input"  placeholder="     Add a new task"> 
+                         <button class="add-today">Add</button>
+                </div> 
+               <div class="tasks tasks-today"></div>
+               </fieldset>
+            </fieldset>
+            <fieldset class="notes">
+               <fieldset class="notes-d dash">
+                    <h3>IMPORTANT NOTES</h3>
+                     <textarea placeholder="Write your important notes here..."></textarea>
+                     <button class="save">save</button>
+               </fieldset>
+            </fieldset>
+       </div>
+
+
+       <div class="container2">
+            <fieldset class="tracker">
+               <fieldset class="tracker-d dash">
+                    <h3>TRACKER</h3>
+                    <div class="tracker-stats">
+                         <p>Total: <span id="total-tasks">10</span></p>
+                         <p>Done: <span id="done-tasks">4</span></p>
+                         <p>Progress: <span id="percent">40%</span></p>
+                    </div>
+
+                    <div class="progress-bar">
+                         <div class="progress-fill" ></div>
+                    </div>
+               </fieldset>
+
+            </fieldset>
+            <fieldset class="tomorrow">
+               <fieldset class="tomorrow-d dash">
+                    <h3>TOMORROW</h3>
+                    <div class="input-container">
+                         <input type="text-area"  id="tomorrow-input" placeholder="    Add a new task"> 
+                         <button class="add-tomorrow">Add</button>
+                   </div> 
+                   <div class="tasks tasks-tomorrow"></div>
+               </fieldset>
+            </fieldset>
+       </div>
+      
+    </fieldset> 
+</body>
+<script src="todolist.js"></script>
+</html>

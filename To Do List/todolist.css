@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+body {
+   background:url(../images/e133a84a30fd050df332244e6c5f2bdc.jpg);
+  font-family: 'Poppins', sans-serif;
+  color: #5a4a78;
+  position: relative;
+}
+
+.main-bar {
+  width: 80vw;
+  position: absolute;
+  left: 50%;
+  top:100px; 
+  transform: translate(-50%,0);
+  background:transparent;
+  display: grid;
+  grid-template-columns: 47.5% 5% 47.5%;
+  max-width: 1200px;
+}
+
+.container1 {
+grid-column: 1/2;
+margin:15px 0;
+display: grid;
+grid-template-rows: 400px  250px ;
+}
+.container2{
+grid-column: 3/4;
+margin:15px 0;
+display: grid;
+grid-template-rows: 250px 400px ;
+}
+fieldset{
+ border-radius: 20px;
+ border: none;
+}
+.notes , .tomorrow {
+  margin-top: 10px;
+}
+.dash{
+  border: 1.5px dashed black;
+  margin-top: 10px;
+}
+.today{
+  background-color: pink;
+}
+.today-d {
+height: 350px;
+}
+.notes{
+  background-color: rgb(241, 241, 156);
+}
+.notes-d{
+height: 192px;
+}
+.tracker{
+  background-color: rgba(191, 237, 203, 0.862);
+}
+.tracker-d{
+height: 200px;
+}
+.tomorrow{
+  background-color: rgb(198, 198, 239);
+}
+.tomorrow-d{
+height: 340px;
+}
+h3{
+  text-align: center;
+   font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+  textarea {
+      width: 90%;
+      height: auto;  
+      overflow-y: auto;
+      margin: 10px auto;
+      display: block;
+      border:none;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 1rem;
+       font-family: 'Pacifico', cursive;
+      resize: none; /* يمنع تكبير/تصغير الحجم */
+      background-color: transparent;
+    } 
+    .save{
+      height: auto;
+    }
+    .input-container{
+      display: flex;
+      flex-direction: row;
+      flex-wrap:wrap ;
+      width: auto;
+    }
+    input{
+     margin:  5px; 
+     justify-content: center;
+     align-items: center;
+     width: 70%;
+     max-width: 300px;
+     height: 30px;
+     border-radius: 20px;
+     border: none;
+    }
+    button{
+     height: 30px;
+     width: 50px;
+     border-radius: 20px;
+     border: none; 
+     cursor: pointer;
+    }
+    button:hover{
+     transform: scale(1.1);
+    }
+    /* منطقة المهام */
+.tasks {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* كل مهمة في سطر */
+  gap: 8px; /* مسافة بين المهام */
+  max-height: 180px;;
+  overflow-y: auto;
+    
+}
+
+/* المهمة الواحدة (checkbox + label) */
+.tasks input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.tasks label {
+  margin-left: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Pacifico', cursive;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.tasks div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.delete {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color:transparent;
+}
+/*the tracker*/
+.tracker-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 18px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #255d23, #7fffb0);
+  transition: width 0.3s ease;
+}
+/**************************
+
+/*the scroller*/
+.tasks::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tasks::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.tasks::-webkit-scrollbar-thumb {
+  background: rgb(252, 177, 189);
+  border-radius: 10px;
+}
+@media (max-width:700px) {
+  .main-bar{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.home-btn {
+  position: absolute;
+  top: 30px;        /* distance from top of page */
+  left: 30px;       /* distance from left of page */
+  padding: 12px 25px;
+  background-color: #ff6b81; /* pinkish-red matching your p text */
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif; /* matches your body font */
+}
+
+.home-btn:hover {
+  background-color: #ff4c63;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
